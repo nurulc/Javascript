@@ -1,3 +1,14 @@
+/**
+ * Algorithm to manage a cache that has a replacement strategy of replacing
+ * the least reast recently used element with a new entry when the cache is full.
+ * 
+ * The algorithm has the following characteristics
+ *
+ * * LFU Cache to store a given capacity of data
+ * * The Double Linked List is used to store the order of deletion from the cache
+ * * The rear.prev holds the most recently used key and the head.next holds the least recently used key
+ * * When the number of elements reaches the capacity, the least frequently used item is removed before adding the next key
+ */
 class DoubleLinkedListNode {
   // Double Linked List Node built specifically for LRU Cache
   constructor (key, val) {
@@ -85,6 +96,9 @@ class LRUCache {
     return null
   }
 }
+/**
+ * Example
+ */
 
 function main () {
   // Example 1 (Small Cache)
@@ -123,4 +137,8 @@ function main () {
   console.log('Fibonacci Series Cache: ', fibCache.cacheInfo(), '\n')
 }
 
+
+/**
+ * ## Test LRU Cache behavior
+ */
 main()

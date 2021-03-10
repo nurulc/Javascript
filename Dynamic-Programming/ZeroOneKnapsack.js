@@ -20,6 +20,10 @@ const zeroOneKnapsack = (arr, n, cap, cache) => {
   }
 }
 
+/**
+ * Example
+ */
+
 const main = () => {
   /*
   Problem Statement:

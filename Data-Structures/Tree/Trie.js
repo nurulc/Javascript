@@ -1,3 +1,8 @@
+/**
+ * Implementation of Trie in Javascript
+ * 
+ */
+
 var TrieNode = function TrieNode (key, parent) {
   this.key = key
   this.count = 0
@@ -118,7 +123,11 @@ Trie.prototype.findOccurences = function (word) {
   return node.count
 };
 
-// To test
+/**
+ * Example
+ */
+
+
 (function demo () {
   var x = new Trie()
   x.insert('sheldon')

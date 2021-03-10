@@ -1,3 +1,8 @@
+/**
+ * Convert string in Roman numeral representation to a number
+ */
+
+
 var values = {
   I: 1,
   V: 5,
@@ -32,6 +37,10 @@ function romanToDecimal (romanNumber) {
   }
   return sum
 }
+
+/**
+ * Example
+ */
 
 console.log(romanToDecimal('XXIIVV'))
 console.log(romanToDecimal('MDCCCIV'))

@@ -1,10 +1,15 @@
-/*
-  Calculate the distance between two coordinates using the haversine formula
-  More about: https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_Haversine
-  @Param {number} latitude1
-  @Param {number} latitude2
-  @Param {number} longitude1
-  @Param {number} longitude2
+/** 
+ * Calculate the distance between two coordinates using the haversine formula
+ * More about: https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_Haversine
+ */
+
+/**
+ * Calculate the distance between two coordinates using the haversine formula
+ * More about: https://pt.wikipedia.org/wiki/F%C3%B3rmula_de_Haversine
+ * @Param {number} latitude1
+ * @Param {number} latitude2
+ * @Param {number} longitude1
+ * @Param {number} longitude2
  */
 const haversineDistance = (latitude1 = 0, longitude1 = 0, latitude2 = 0, longitude2 = 0) => {
   validateLatOrLong(latitude1)
@@ -30,3 +35,11 @@ const validateLatOrLong = value => {
 }
 
 export { haversineDistance }
+
+/**
+ * Example
+ */
+
+var London = [51.5074, -0.1278];
+var NewYork = [40.7128, -74.0060];
+haversineDistance = (London[0], London[1], NewYork[0], NewYork[1]);

@@ -66,6 +66,11 @@ const vertices = ['A', 'B', 'C', 'D', 'E', 'F']
 for (let i = 0; i < vertices.length; i++) {
   graph.addVertex(vertices[i])
 }
+/**
+ * ## Example
+ *
+ * 
+ */
 
 // adding edges
 graph.addEdge('A', 'B')
@@ -77,12 +82,15 @@ graph.addEdge('E', 'F')
 graph.addEdge('E', 'C')
 graph.addEdge('C', 'F')
 
-// prints all vertex and
-// its adjacency list
-// A -> B D E
-// B -> A C
-// C -> B E F
-// D -> A E
-// E -> A D F C
-// F -> E C
+/**
+ * ## Test the example
+ * prints all vertex and
+ * its adjacency list
+ * * A -> B D E
+ * * B -> A C
+ * * C -> B E F
+ * * D -> A E
+ * * E -> A D F C
+ * * F -> E C
+ */
 graph.printGraph()

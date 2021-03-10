@@ -1,3 +1,7 @@
+/**
+ * Reverse words in a string
+ */
+
 /*
 *  Doctests
 *
@@ -30,3 +34,9 @@ const reverseWords = (str) => {
 }
 
 export { reverseWords }
+
+/**
+ * Example
+ * 
+ */
+reverseWords('I Love JS')

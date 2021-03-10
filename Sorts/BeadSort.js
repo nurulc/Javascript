@@ -70,8 +70,9 @@ function beadSort (sequence) {
 }
 
 /**
-* Implementation of Bead Sort
-*/
+ * Example
+ * Implementation of Bead Sort
+ */
 const array = [5, 4, 3, 2, 1]
 // Before Sort
 console.log('\n- Before Sort | Implementation of Bead Sort -')

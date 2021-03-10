@@ -1,4 +1,10 @@
-// Wikipedia: https://en.wikipedia.org/wiki/Knight%27s_tour
+/**
+ * Wikipedia: https://en.wikipedia.org/wiki/Knight%27s_tour
+ *
+ * 
+ */
+
+
 
 class OpenKnightTour {
   constructor (size) {
@@ -64,6 +70,10 @@ class OpenKnightTour {
   }
 }
 
+/**
+ * Example
+ * 
+ */
 function main () {
   const board = new OpenKnightTour(5)
 

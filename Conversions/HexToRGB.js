@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 function hexStringToRGB (hexString) {
   var r = hexString.substring(0, 2)
   var g = hexString.substring(2, 4)
@@ -10,5 +14,9 @@ function hexStringToRGB (hexString) {
 
   return obj
 }
+
+/**
+ * Example
+ */
 
 console.log(hexStringToRGB('ffffff'))

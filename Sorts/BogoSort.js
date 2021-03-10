@@ -1,4 +1,4 @@
-/*
+/**
  * A simple helper function that checks, if the array is
  * sorted in ascending order.
  */
@@ -46,6 +46,9 @@ function bogoSort (items) {
   return items
 }
 
+/**
+ * Example
+ */
 // Implementation of bogoSort
 
 const ar = [5, 6, 7, 8, 1, 2, 12, 14]

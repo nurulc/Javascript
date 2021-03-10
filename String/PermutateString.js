@@ -1,3 +1,7 @@
+/**
+ * Return all permutation of a string
+ */
+
 'use strict'
 
 const permutate = (aString) => {
@@ -31,3 +35,9 @@ const calculateCurrentCharacterPermutation = (allPermutations, currentCharacter)
 }
 
 export { permutate }
+
+/**
+ * Example
+ */
+
+permutate('good'); //['dgoo', 'dogo', 'doog', 'gdoo', 'godo', 'good', 'odgo', 'odog', 'ogdo', 'ogod', 'oodg', 'oogd']

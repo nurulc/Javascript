@@ -1,3 +1,15 @@
+/**
+ * Algorithm to manage a cache that has a replacement strategy of replacing
+ * the least frequent element with a new entry when the cache is full.
+ * 
+ * The algorithm has the following characteristics
+ *
+ * * LFU Cache to store a given capacity of data
+ * * The Double Linked List is used to store the order of deletion from the cache
+ * * The rear.prev holds the most frequently used key and the head.next holds the least used key
+ * * When the number of elements reaches the capacity, the least frequently used item is removed before adding the next key
+ */
+
 class DoubleLinkedListNode {
   // Double Linked List Node built specifically for LFU Cache
   constructor (key, val) {
@@ -103,6 +115,12 @@ class LFUCache {
   }
 }
 
+/**
+ * Example
+ *
+ * ## Setup the test function
+ */
+
 function main () {
   // Example 1 (Small Cache)
   const cache = new LFUCache(2)
@@ -139,5 +157,9 @@ function main () {
   for (let i = 1; i <= 100; i++) { fib(i, fibCache) }
   console.log('Fibonacci Series Cache: ', fibCache.cacheInfo(), '\n')
 }
+
+/**
+ * ## Run the test
+ */
 
 main()

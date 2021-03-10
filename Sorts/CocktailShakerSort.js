@@ -1,4 +1,5 @@
-/*
+/**
+ * 
  * Cocktail Shaker Sort is an algorithm that is a Bidirectional Bubble Sort.
  * The algorithm extends bubble sort by operating in two directions.
  * While it improves on bubble sort by more quickly moving items to the beginning of the list,
@@ -43,8 +44,9 @@ function cocktailShakerSort (items) {
 }
 
 /**
-* Implementation of Cocktail Shaker Sort
-*/
+ * Example
+ * Implementation of Cocktail Shaker Sort
+ */
 const array = [5, 6, 7, 8, 1, 2, 12, 14]
 // Before Sort
 console.log('\n- Before Sort | Implementation of Cocktail Shaker Sort -')

@@ -20,6 +20,10 @@ function XOR (str, key) {
   return result
 }
 
+/**
+ * Example
+ */
+
 const encryptedString = XOR('test string', 32)
 console.log('Encrypted: ', encryptedString)
 const decryptedString = XOR(encryptedString, 32)

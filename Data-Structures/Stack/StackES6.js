@@ -1,7 +1,11 @@
-/* Stack data-structure. It's work is based on the LIFO method (last-IN-first-OUT).
+/**
+ * ## Stack data-structure. 
+ * It's work is based on the LIFO method (last-IN-first-OUT).
+ * 
  * It means that elements added to the stack are placed on the top and only the
  * last element (from the top) can be reached. After we get access to the last
  * element, he pops from the stack.
+ * 
  * This is a class-based implementation of a Stack. It provides functions
  * 'push' - to add an element, 'pop' - to remove an element from the top.
  * Also it implements 'length', 'last' and 'isEmpty' properties and
@@ -53,6 +57,13 @@ class Stack {
     return el instanceof Stack
   }
 }
+
+/**
+ * Example 
+ */
+
+
+ 
 const newStack = new Stack()
 console.log('Is it a Stack?,', Stack.isStack(newStack))
 console.log('Is stack empty? ', newStack.isEmpty)

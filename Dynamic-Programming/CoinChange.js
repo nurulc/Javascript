@@ -1,3 +1,9 @@
+/**
+ * Coin change algorithm
+ * 
+ */
+
+
 function change (coins, amount) {
   const combinations = new Array(amount + 1).fill(0)
   combinations[0] = 1
@@ -34,6 +40,10 @@ function minimumCoins (coins, amount) {
   }
   return minimumCoins[amount]
 }
+
+/**
+ * Example
+ */
 
 function main () {
   const amount = 12

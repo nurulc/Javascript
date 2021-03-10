@@ -1,3 +1,7 @@
+/**
+ * Algorithn to place queens on an nXn chess bord such that no queen can be takem
+ * 
+ */
 class NQueen {
   constructor (size) {
     this.board = new Array(size).fill('.').map(() => new Array(size).fill('.'))
@@ -51,8 +55,15 @@ class NQueen {
   }
 }
 
-function main () {
-  const board = new NQueen(8)
+
+/**
+ * Example
+ *
+ * ## Setup N queens problem
+ */
+
+function main (n) {
+  const board = new NQueen(n)
 
   board.printBoard()
   console.log('\n')
@@ -62,4 +73,9 @@ function main () {
   board.printBoard()
 }
 
-main()
+/**
+ * ## Run n Queen problen 
+ *
+ * The following is a example of the solution to the nQueens for a regular chessboard
+ */
+main(8)

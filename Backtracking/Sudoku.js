@@ -1,3 +1,8 @@
+/**
+ * # Sudocu
+ * Algorithn to place queens on an nXn chess bord such that no queen can be takem
+ * 
+ */
 class Sudoku {
   // Sudoku Class to hold the board and related functions
   constructor (board) {
@@ -72,6 +77,10 @@ class Sudoku {
   }
 }
 
+/**
+ * Example
+ * 
+ */
 function main () {
   // main function with an example
   const sudokuBoard = new Sudoku([
@@ -93,5 +102,12 @@ function main () {
 
   sudokuBoard.printBoard()
 }
+
+
+/**
+ *  Example
+ *
+ *  ## Execute the code sudoku solver
+ */
 
 main()

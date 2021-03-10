@@ -29,7 +29,11 @@ function rot13 (str) {
   return response.join('')
 }
 
-// Caesars Cipher Example
+/**
+ * Example
+ * Caesars Cipher
+ * 
+ */
 const encryptedString = 'Uryyb Jbeyq'
 const decryptedString = rot13(encryptedString)
 

@@ -1,3 +1,7 @@
+/**
+ * 
+ */
+
 function RGBToHex (r, g, b) {
   if (
     typeof r !== 'number' ||
@@ -11,6 +15,10 @@ function RGBToHex (r, g, b) {
 
   return `#${toHex(r)}${toHex(g)}${toHex(b)}`
 }
+
+/**
+ * Example
+ */
 
 console.log(RGBToHex(255, 255, 255) === '#ffffff')
 console.log(RGBToHex(255, 99, 71) === '#ff6347')

@@ -1,5 +1,8 @@
-// wiki - https://en.wikipedia.org/wiki/Tower_of_Hanoi
-// Recursive Javascript function to solve tower of hanoi
+/**
+ * 
+ * wiki - https://en.wikipedia.org/wiki/Tower_of_Hanoi
+ * Recursive Javascript function to solve tower of hanoi
+ */
 
 function TowerOfHanoi (n, fromRod, toRod, auxRod) {
   if (n === 1) {
@@ -10,6 +13,9 @@ function TowerOfHanoi (n, fromRod, toRod, auxRod) {
   console.log(`Move disk ${n} from rod ${fromRod} to rod ${toRod}`)
   TowerOfHanoi(n - 1, auxRod, toRod, fromRod)
 }
+/**
+ * Example
+ */
 // Driver code
 const n = 4
 TowerOfHanoi(n, 'A', 'C', 'B')

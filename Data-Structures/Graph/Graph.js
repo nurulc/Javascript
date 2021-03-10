@@ -1,3 +1,7 @@
+/**
+ * Graph traversal
+ */
+
 class Graph {
   constructor () {
     this.adjacencyMap = {}
@@ -56,6 +60,10 @@ class Graph {
     }
   }
 }
+
+/**
+ * Example
+ */
 
 const example = () => {
   const g = new Graph()

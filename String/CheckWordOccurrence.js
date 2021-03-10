@@ -23,3 +23,31 @@ const checkWordOccurrence = (str, isCaseSensitive = false) => {
   return result
 }
 export { checkWordOccurrence }
+
+/**
+ * Example
+ */
+
+checkWordOccurrence('This is not the correct code for word occurence, but the code for character occurence');
+/**
+ * the correct code is as follows
+ */
+
+function wordOccurence(str, isCaseSensitive) {
+  if(!isCaseSensitive) str = str.toLowerCase();
+  
+  let list = str.split(/[^a-zA-Z]+/);
+  let tally = {};
+  list.forEach(w => {
+    if(!tally[w]) tally[w] = 1;
+    else tally[w]++;
+  });
+  return tally
+}
+/**
+ * Alternative word orrcurenc
+ */
+
+wordOccurence('This is not the correct code for word occurence, but the code for character occurence');
+
+

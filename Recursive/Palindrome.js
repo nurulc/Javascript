@@ -20,7 +20,10 @@ const Palindrome = (str) => {
   }
 };
 
-// testing
+/**
+ * Example
+ */
+
 (() => {
   console.log('Palindrome: String: a = ', Palindrome('a'))
   console.log('Palindrome: String: abba = ', Palindrome('abba'))
@@ -28,3 +31,4 @@ const Palindrome = (str) => {
   console.log('Not Palindrome: String: abbxa = ', Palindrome('abbxa'))
   console.log('Not Palindrome: String: abxa = ', Palindrome('abxa'))
 })()
+

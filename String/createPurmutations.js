@@ -1,7 +1,7 @@
-/*
-a permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order, or if the set is already ordered, a rearrangement of its elements.
-The word "permutation" also refers to the act or process of changing the linear order of an ordered set
-More at : https://en.wikipedia.org/wiki/Permutation
+/**
+ * A permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order, or if the set is already ordered, a rearrangement of its elements.
+ * The word "permutation" also refers to the act or process of changing the linear order of an ordered set
+ * More at : https://en.wikipedia.org/wiki/Permutation
 */
 
 const createPermutations = (str) => {
@@ -34,4 +34,7 @@ const createPermutations = (str) => {
   return perms
 }
 
+/**
+ * Example
+ */
 console.log(createPermutations('abc')) // should print ["abc", "acb", "bac", "bca", "cab", "cba"]

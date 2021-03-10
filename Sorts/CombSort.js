@@ -44,8 +44,9 @@ function combSort (list) {
 }
 
 /**
-* Implementation of Comb Sort
-*/
+ * Example
+ * Implementation of Comb Sort
+ */
 const array = [5, 6, 7, 8, 1, 2, 12, 14]
 // Before Sort
 console.log('\n- Before Sort | Implementation of Comb Sort -')

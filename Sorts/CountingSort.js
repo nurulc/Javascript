@@ -31,8 +31,9 @@ function countingSort (arr, min, max) {
 }
 
 /**
-* Implementation of Counting Sort
-*/
+ * Example
+ * Implementation of Counting Sort
+ */
 const array = [3, 0, 2, 5, 4, 1]
 // Before Sort
 console.log('\n- Before Sort | Implementation of Counting Sort -')

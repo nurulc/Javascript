@@ -1,5 +1,9 @@
-// implementation of Queue using 2 stacks
-// contribution made by hamza chabchoub for a university project
+/**
+ * Implementation of Queue using 2 stacks
+ *
+ * contribution made by hamza chabchoub for a university project
+ */
+
 
 class Queue {
   constructor () {
@@ -50,6 +54,9 @@ class Queue {
   }
 }
 
+/**
+ * Example
+ */
 // testing
 
 const queue = new Queue()

@@ -2,12 +2,12 @@
  * QuickSelect is an algorithm to find the kth smallest number
  *
  * Notes:
- * -QuickSelect is related to QuickSort, thus has optimal best and average
+ * 1. QuickSelect is related to QuickSort, thus has optimal best and average
  *  case (O(n)) but unlikely poor worst case (O(n^2))
- * -This implementation uses randomly selected pivots for better performance
+ * 1. This implementation uses randomly selected pivots for better performance
  *
- * @complexity: O(n) (on average )
- * @complexity: O(n^2) (worst case)
+ * * @complexity: O(n) (on average )
+ * * @complexity: O(n^2) (worst case)
  * @flow
  */
 
@@ -62,5 +62,9 @@ function Swap (arr, x, y) {
   [arr[x], arr[y]] = [arr[y], arr[x]]
 }
 
-// testing
-console.log(QuickSelect([1, 4, 2, -2, 4, 5]))
+
+/**
+ * Example
+ */
+
+console.log(QuickSelect([1, 4, 2, -2, 4, 5],3))

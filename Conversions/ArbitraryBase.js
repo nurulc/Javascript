@@ -1,4 +1,9 @@
 /**
+ * 
+ * Converts a string from one base to other
+ */
+
+/**
 * Converts a string from one base to other
 * @param {string} stringInBaseOne String in input base
 * @param {string} baseOneCharacters Character set for the input base
@@ -37,6 +42,10 @@ const convertArbitraryBase = (stringInBaseOne, baseOneCharacters, baseTwoCharact
   const baseTwoZero = baseTwoCharacters.charAt(0)
   return stringInBaseTwo.replace(new RegExp(`^${baseTwoZero}+`), '')
 }
+
+/**
+ * Example
+ */
 
 (() => {
   console.log(convertArbitraryBase('98', '0123456789', '01234567'))

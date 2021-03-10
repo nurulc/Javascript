@@ -1,4 +1,8 @@
 /**
+ * Vigenere cifer implementation
+ */
+
+/**
  * Check if the Character is letter or not
  * @param {String} str - character to check
  * @return {object} An array with the character or null if isn't a letter
@@ -71,6 +75,10 @@ function decrypt (message, key) {
   return result
 }
 
+/**
+ * Example
+ * 
+ */
 const messageEncrypt = encrypt('Hello World!', 'code')
 console.log(messageEncrypt) // "Jhpnr Yrvng!"
 

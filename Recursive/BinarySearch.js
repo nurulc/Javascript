@@ -1,6 +1,9 @@
-
-// https://en.wikipedia.org/wiki/Binary_search_algorithm
-// Search the integer inside the sorted integers array using Binary Search Algorithm
+/**
+ * Binary Search
+ * * https://en.wikipedia.org/wiki/Binary_search_algorithm
+ * 
+ * Search the integer inside the sorted integers array using Binary Search Algorithm
+ */
 
 const BinarySearch = (intArr, searchQuery) => {
   if (searchQuery === null || searchQuery === undefined || intArr.length === 0) {
@@ -17,7 +20,9 @@ const BinarySearch = (intArr, searchQuery) => {
     return false
   }
 }
-
+/**
+ * Example
+ */
 // testing
 (() => {
   console.log('Number Present with odd array length: 5 = ', BinarySearch([1, 2, 3, 4, 5, 6, 7], 5))

@@ -1,7 +1,8 @@
-/*
-  Given a string of characters, return the character that appears the most often.
-  Example: input = "Hello World!" return "l"
-*/
+/**
+ * Given a string of characters, return the character that appears the most often.
+ * 
+ * Example: input = "Hello World!" return "l"
+ */
 const maxCharacter = (value) => {
   if (typeof value !== 'string') {
     throw new TypeError('The param should be a string')
@@ -27,3 +28,10 @@ const maxCharacter = (value) => {
 }
 
 export { maxCharacter }
+
+/**
+ * Example
+ */
+
+console.log(maxCharacter("Hello World!"), 'return l');
+console.log(maxCharacter('The param should be a valid string'));

@@ -1,7 +1,7 @@
-/*
-  Breadth First Tree Traversal or level order traversal implementation in javascript
-  Author: @GerardUbuntu
-*/
+/**
+ * Breadth First Tree Traversal or level order traversal implementation in javascript
+ * Author: @GerardUbuntu
+ */
 
 class Node {
   constructor (data) {
@@ -47,6 +47,10 @@ class BinaryTree {
     }
   }
 }
+
+/**
+ * Example
+ */
 
 const binaryTree = new BinaryTree()
 const root = new Node(7)

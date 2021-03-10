@@ -71,6 +71,11 @@ class BinaryHeap {
   }
 }
 
+/**
+ * Example
+ *  # Example of usage of maxHeap
+ */
+
 const maxHeap = new BinaryHeap()
 maxHeap.insert([4])
 maxHeap.insert([3])

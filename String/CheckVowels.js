@@ -1,6 +1,6 @@
-/*
-  Given a string of words or phrases, count the number of vowels.
-  Example: input = "hello world" return 3
+/**
+ * Given a string of words or phrases, count the number of vowels.
+ * Example: input = "hello world" return 3
  */
 
 const checkVowels = (value) => {
@@ -19,3 +19,10 @@ const checkVowels = (value) => {
 }
 
 export { checkVowels }
+/**
+ * Example
+ */
+
+let testStr = 'the quick brown fox jumps over the lazy doc';
+console.log('one method',testStr.replace(/[^aeiou]/ig,'').length);
+console.log('this method',checkVowels(testStr));

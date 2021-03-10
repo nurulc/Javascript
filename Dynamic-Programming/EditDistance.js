@@ -1,16 +1,18 @@
-/*
-Wikipedia -> https://en.wikipedia.org/wiki/Edit_distance
-
-Q. -> Given two strings `word1` and `word2`. You can perform these operations on any of the string to make both strings similar.
-    - Insert
-    - Remove
-    - Replace
-Find the minimum operation cost required to make both same. Each operation cost is 1.
-
-Algorithm details ->
-time complexity - O(n*m)
-space complexity - O(n*m)
-*/
+/**
+ * 
+ * Wikipedia -> https://en.wikipedia.org/wiki/Edit_distance
+ * 
+ * * Q. -> Given two strings `word1` and `word2`. You can perform these operations on any of the string to make both strings similar.
+ *    * Insert
+ *    * Remove
+ *    * Replace
+ *
+ * Find the minimum operation cost required to make both same. Each operation cost is 1.
+ * 
+ * Algorithm details ->
+ * * time complexity - O(n*m)
+ * * space complexity - O(n*m)
+ */
 
 const minimumEditDistance = (word1, word2) => {
   const n = word1.length
@@ -50,6 +52,10 @@ const minimumEditDistance = (word1, word2) => {
 
   return dp[m][n]
 }
+
+/**
+ * Example
+ */
 
 const main = () => {
   console.log(minimumEditDistance('horse', 'ros'))

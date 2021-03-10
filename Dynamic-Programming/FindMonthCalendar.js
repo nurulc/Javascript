@@ -1,8 +1,8 @@
-/*
-*  This algorithm accepts a month in the format mm/yyyy.
-*  And prints out the month's calendar.
-*  It uses an epoch of 1/1/1900, Monday.
-*/
+/**
+ *  This algorithm accepts a month in the format mm/yyyy.
+ *  And prints out the month's calendar.
+ *  It uses an epoch of 1/1/1900, Monday.
+ */
 
 class Month {
   constructor () {
@@ -108,6 +108,9 @@ class Month {
   }
 }
 
+/**
+ * Example
+ */
 // testing
 const x = new Month()
 x.generateMonthCal('1/2021')

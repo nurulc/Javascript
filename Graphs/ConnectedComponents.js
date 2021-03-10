@@ -1,3 +1,9 @@
+/**
+ * Crate a graph from an adjacency list, the connections are unweighted end goes in one direction
+ *
+ *  See example below 
+ */
+
 class GraphUnweightedUndirectedAdjacencyList {
   // Unweighted Undirected Graph class
   constructor () {
@@ -45,6 +51,11 @@ class GraphUnweightedUndirectedAdjacencyList {
   }
 }
 
+/**
+ * Example
+ *
+ *  ## Build the graph from adjacency list
+ */
 function main () {
   const graph = new GraphUnweightedUndirectedAdjacencyList()
   graph.addEdge(1, 2) // Component 1
@@ -53,4 +64,7 @@ function main () {
   console.log(graph.connectedComponents())
 }
 
+/**
+ * ## Now test the graph built
+ */
 main()

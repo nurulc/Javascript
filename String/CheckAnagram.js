@@ -1,5 +1,15 @@
-// Anagram check is case sensitive; i.e. Aba and aba is not a anagram.
-// inputs are strings i.e. str1 and str2
+/**
+ * 
+ * Anagram check is case sensitive; i.e. Aba and aba is not a anagram.
+ * inputs are strings i.e. str1 and str2
+ */
+
+/**
+ * Check if two string (str1, str2) are anagrams of each other
+ * @param  {string} str1 first string
+ * @param  {string} str2 potential anagram string
+ * @return {boolean}      true - if anagram, otherwise false
+ */
 const checkAnagram = (str1, str2) => {
   // check that inputs are strings.
   if (typeof str1 !== 'string' || typeof str2 !== 'string') {

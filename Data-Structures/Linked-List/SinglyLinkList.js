@@ -1,10 +1,13 @@
-/* SinglyLinkedList!!
-* A linked list is implar to an array, it hold values.
-* However, links in a linked list do not have indexes. With
-* a linked list you do not need to predetermine it's size as
-* it grows and shrinks as it is edited. This is an example of
-* a singly linked list.
-*/
+/**
+ *  SinglyLinkedList!!
+ * A linked list is implar to an array, it hold values.
+ * However, links in a linked list do not have indexes. With
+ * a linked list you do not need to predetermine it's size as
+ * it grows and shrinks as it is edited. This is an example of
+ * a singly linked list.
+ *
+ * Functions - add, remove, indexOf, elementAt, addAt, removeAt, view
+ */
 
 // Functions - add, remove, indexOf, elementAt, addAt, removeAt, view
 
@@ -194,7 +197,11 @@ var LinkedList = (function () {
   return LinkedList
 }())
 
-// Implementation of LinkedList
+/**
+ * Example
+ * Implementation of LinkedList
+ */
+
 var linklist = new LinkedList()
 linklist.add(2)
 linklist.add(5)

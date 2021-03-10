@@ -1,10 +1,8 @@
 /**
-  function that takes month number and its year and returns the number of days within it
-  * @param monthNumber.
-  * @param year.
-  e.g.: mahfoudh.arous@gmail.com -> true
-  e.g.: mahfoudh.arous.com ->false
-*/
+ *  Function that takes month number and its year and returns the number of days within it
+ *  * @param monthNumber.
+ *  * @param year.
+ */
 
 const getMonthDays = (monthNumber, year) => {
   const the31DaysMonths = [1, 3, 5, 7, 8, 10, 12]
@@ -31,3 +29,13 @@ const getMonthDays = (monthNumber, year) => {
 }
 
 export { getMonthDays }
+/**
+ * Example
+ */
+
+console.log('1,2020',getMonthDays(1,2020));
+console.log('2.2000', getMonthDays(2,2000));
+console.log('2,2021',getMonthDays(2,2021));
+console.log('2,1900',getMonthDays(2,1900));
+console.log('11,2021',getMonthDays(3,2020));
+console.log('5,2021',getMonthDays(5,2020));

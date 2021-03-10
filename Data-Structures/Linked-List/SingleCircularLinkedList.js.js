@@ -1,3 +1,7 @@
+/**
+ *  This is an implementation of a circular linked list
+ */
+
 class Node {
   constructor (data, next = null) {
     this.data = data
@@ -85,6 +89,11 @@ class SinglyCircularLinkedList {
   }
 }
 
+
+/**
+ * Example
+ * 
+ */
 const ll = new SinglyCircularLinkedList()
 
 ll.insert(10)

@@ -1,7 +1,8 @@
-/*
-  Function that takes a string input and return either true or false
-  If it is a valid email address
-*/
+/**
+ * Function that takes a string input and return either true or false
+ * If it is a valid email address
+ * 
+ */
 
 /*
 *  Doctests
@@ -26,3 +27,9 @@ const validateEmail = (str) => {
 }
 
 export { validateEmail }
+/**
+ * Example
+ */
+
+console.log(validateEmail('mahfoudh.arous@gmail.com');
+console.log(validateEmail('mahfoudh.arous.gmail.com');

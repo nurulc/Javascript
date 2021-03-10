@@ -1,3 +1,9 @@
+/**
+ * GCD - Ecclid's algorithm
+ *
+ * Find the greatest common divisor
+ */
+
 function euclideanGCDRecursive (first, second) {
   /*
     Calculates GCD of two numbers using Euclidean Recursive Algorithm
@@ -26,6 +32,10 @@ function euclideanGCDIterative (first, second) {
   }
   return first
 }
+
+/**
+ * Example
+ */
 
 function main () {
   const first = 20

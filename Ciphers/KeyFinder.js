@@ -1,7 +1,9 @@
-/******************************************************
- Find and retrieve the encryption key automatically
- Note: This is a draft version, please help to modify, Thanks!
- ******************************************************/
+/**
+ *  ## Key Finder Descriptio
+ *  Find and retrieve the encryption key automatically
+ * Note: This is a draft version, please help to modify, Thanks!
+ */
+
 function keyFinder (str) { // str is used to get the input of encrypted string
   const wordBank = [
     'I ',
@@ -145,4 +147,8 @@ function caesarCipherEncodeAndDecodeEngine (inStr, numShifted) {
   return outStr
 }
 
+/**
+ * Example
+ * 
+ */
 console.log('Testing: ' + keyFinder('test')) // returns 0

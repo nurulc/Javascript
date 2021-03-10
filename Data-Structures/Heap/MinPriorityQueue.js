@@ -1,15 +1,17 @@
+/**
+ *  Minimum Priority Queue
+ * It is a part of heap data structure
+ * A heap is a specific tree based data structure
+ * in which all the nodes of tree are in a specific order.
+ * that is the children are arranged in some
+ * respect of their parents, can either be greater
+ * or less than the parent. This makes it a min priority queue
+ * or max priority queue.
+ *
+ * Functions: insert, delete, peek, isEmpty, print, heapSort, sink
+ */
 
-/* Minimum Priority Queue
-* It is a part of heap data structure
-* A heap is a specific tree based data structure
-* in which all the nodes of tree are in a specific order.
-* that is the children are arranged in some
-* respect of their parents, can either be greater
-* or less than the parent. This makes it a min priority queue
-* or max priority queue.
-*/
 
-// Functions: insert, delete, peek, isEmpty, print, heapSort, sink
 
 class MinPriorityQueue {
   // calls the constructor and initializes the capacity
@@ -109,7 +111,12 @@ class MinPriorityQueue {
   }
 }
 
-// testing
+/**
+ * Example
+ *
+ * ## Test the example (MinPriority) 
+ */
+
 const q = new MinPriorityQueue(8)
 
 q.insert(5)

@@ -1,8 +1,10 @@
-// Implementing KMP Search Algorithm to search all the instances of pattern in
-// given text
-// Reference Book: Introduction to Algorithms, CLRS
-
-// Explanation: https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-string-searching-algorithms/
+/** 
+ * Implementing KMP Search Algorithm to search all the instances of pattern in
+ * given text
+ * Reference Book: Introduction to Algorithms, CLRS
+ *
+ * Explanation: https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-string-searching-algorithms/
+ */
 
 const computeLPS = (pattern) => {
   const lps = Array(pattern.length)
@@ -53,3 +55,11 @@ const KMPSearch = (text, pattern) => {
 }
 
 export { KMPSearch }
+/**
+ * Example
+ */
+/*test
+
+
+
+*/

@@ -1,15 +1,28 @@
-// Hamza chabchoub contribution for a university project
+/**
+ * Implementation of a doubly linked list
+ *
+ * Hamza chabchoub contribution for a university project
+ */
+
+
+// 
 function DoubleLinkedList () {
   const Node = function (element) {
     this.element = element
     this.next = null
     this.prev = null
   }
+  Node.prototype.toString = function() {
+    return ''+this.element;
+  }
 
   let length = 0
   let head = null
   let tail = null
 
+  this.newNode(element) {
+    return new Node(element);
+  }
   // Add new element
   this.append = function (element) {
     const node = new Node(element)
@@ -196,7 +209,17 @@ function DoubleLinkedList () {
   }
 }
 
+/**
+ * Example
+ */
+
 const newDoubleLinkedList = new DoubleLinkedList()
-newDoubleLinkedList.append(1)
-newDoubleLinkedList.append(2)
-console.log('Testing: ' + newDoubleLinkedList.size()) // returns 2
+[1,2,3,4,5,6].forEach(e => newDoubleLinkedList.append(e))
+
+console.log('display: ' + newDoubleLinkedList.toString(), 'Expect 6');
+let aNode = newDoubleLinkedList.newNode(7);
+console.log('New Node', aNode.toString(), 'Expect 7'); 
+console.log('size: ' + newDoubleLinkedList.size(), 'Expect 6'); 
+console.log('getHead: ' + newDoubleLinkedList.getHead().toString(), 'Expect 1'); 
+console.log('getTail: ' + newDoubleLinkedList.getTail().toString(), 'Expect 1'); 
+console.log('isEmpty: ' + newDoubleLinkedList.isEmpty(), 'Expect false'); 

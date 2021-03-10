@@ -232,9 +232,10 @@ const AVLTree = (function () {
 }());
 
 /**
+ * Example
  * A Code for Testing the AVLTree
  */
-(function test () {
+(function test (display) {
   const newAVL = new AVLTree()
   const size = Math.floor(Math.random() * 1000000)
   let uniques = 0
@@ -247,9 +248,13 @@ const AVLTree = (function () {
       array.push(temp)
     }
   }
+  display("Number of items addes", uniques, "size of tree", newAVL.size);
   if (newAVL.size !== uniques) {
     throw new Error('elements not inserted properly')
   }
+  let dataSet = new Set(array);
+  // Find test
+
   const findTestSize = Math.floor(Math.random() * uniques)
   for (i = 0; i < findTestSize; i++) {
     j = Math.floor(Math.random() * uniques)
@@ -257,6 +262,19 @@ const AVLTree = (function () {
       throw new Error('inserted elements not found')
     }
   }
+  display("all items #", uniques, "found");
+
+  // Not find tests
+  const findTestSize = Math.floor(Math.random() * uniques)
+  for (i = 0; i < findTestSize; i++) {
+    j = Math.floor(Math.random() * Number.MAX_VALUE)
+    if (!dataSet.has(j) && newAVL.find(j)) {
+      throw new Error('item should not be found ' + j)
+    }
+  }
+  display("Seraching random values test successful");
+
+  // Delete test
   const deleteTestSize = Math.floor(uniques * Math.random())
   for (i = 0; i < deleteTestSize; i++) {
     j = Math.floor(Math.random() * uniques)
@@ -266,7 +284,8 @@ const AVLTree = (function () {
         throw new Error('delete not working properly')
       }
     }
+    display("delets is working")
   }
-})()
+})((...args) => console.log(...args))
 
 module.exports = AVLTree
