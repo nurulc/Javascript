@@ -1,0 +1,65 @@
+!head
+  <title>ClimbingStairs</title>
+!md
+# ClimbingStairs
+
+You are climbing a stair case. It takes n steps to reach to the top.
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+!tryit
+
+const climbStairs = (n) => {
+  let prev = 0
+  let cur = 1
+  let temp
+
+  for (let i = 0; i < n; i++) {
+    temp = prev
+    prev = cur
+    cur += temp
+  }
+  return cur
+}
+
+!md
+Example
+
+This is a to test 
+
+!tryit
+const main = () => {
+  const number = 5
+
+  console.log('Number of ways to climb ' + number + ' stairs in ' + climbStairs(number))
+}
+
+
+!md
+Test the example
+
+!tryit
+
+ClimbingStairsTest()
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["CoinChange.try","","../index.html"]);
+</script>

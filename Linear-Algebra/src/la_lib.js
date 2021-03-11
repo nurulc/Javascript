@@ -10,7 +10,8 @@ var LinearAlgebra;
   /*
         class: Vector
         This class represents a vector of arbitrary size and operations on it.
-    */
+    */ 
+  console.log('********************************   LinearAlgebra', JSON.stringify(LinearAlgebra));
   var Vector = /** @class */ (function () {
     // constructor
     function Vector (N, comps) {

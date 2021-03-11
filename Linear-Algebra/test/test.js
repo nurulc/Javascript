@@ -8,10 +8,20 @@
 /* eslint-disable */
 
 var assert = require('assert')
-var fs = require('fs')
+var fs = require('fs');
+var LinearAlgebra;
 
 // file is included here
-eval(fs.readFileSync('src/la_lib.js') + '')
+var libStr = fs.readFileSync('Linear-algebra/src/la_lib.js', 'utf8');
+if(!libStr.match(/Vector/)) {
+  throw new Error('Failed to read library');
+}
+console.log("-------------------------------", libStr);
+
+(null,eval)( libStr);
+if(LinearAlgebra===undefined) {
+  throw new Error('Failed execute la_lib.js library');  
+}
 // Tests goes here
 
 // creating some vectors

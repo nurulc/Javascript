@@ -1,0 +1,62 @@
+!head
+  <title>ROT13</title>
+!md
+# ROT13
+
+Transcipher a ROT13 cipher
+
+Translates each character in the original list to the character in the corresponding
+postiton in the  `toBeMappedCharaterList` list.
+
+*  originalCharacterList   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+*  toBeMappedCharaterList  'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+
+
+!tryit
+
+function transcipher(text) {
+  const originalCharacterList = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+  const toBeMappedCharaterList = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
+  const index = x => originalCharacterList.indexOf(x)
+  const replace = x => index(x) > -1 ? toBeMappedCharaterList[index(x)] : x
+  return text.split('').map(replace).join('')
+}
+
+!md
+Example
+
+## Run a test
+
+!tryit
+
+(() => {
+  const messageToBeEncrypted = 'The quick brown fox jumps over the lazy dog'
+  console.log(`Original Text = "${messageToBeEncrypted}"`)
+  const rot13CipheredText = transcipher(messageToBeEncrypted)
+  console.log(`Ciphered Text = "${rot13CipheredText}"`)
+  const rot13DecipheredText = transcipher(rot13CipheredText)
+  console.log(`Deciphered Text = "${rot13DecipheredText}"`)
+})()
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["VigenereCipher.try","KeyFinder.try","../index.html"]);
+</script>

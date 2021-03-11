@@ -1,0 +1,49 @@
+!head
+  <title>GenerateGUID</title>
+!md
+# GenerateGUID
+
+Generates a UUID/GUID in Node.Js.
+The script uses `Math.random` in combination with the timestamp for better randomness.
+The function generate an RFC4122 (https://www.ietf.org/rfc/rfc4122.txt) version 4 UUID/GUID
+
+!tryit
+
+const Guid = () => {
+  const pattern = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+  let currentDateMilliseconds = new Date().getTime()
+  return pattern.replace(/[xy]/g, currentChar => {
+    const randomChar = (currentDateMilliseconds + Math.random() * 16) % 16 | 0
+    currentDateMilliseconds = Math.floor(currentDateMilliseconds / 16)
+    return (currentChar === 'x' ? randomChar : (randomChar & 0x7 | 0x8)).toString(16)
+  })
+}
+
+!md
+Example
+
+!tryit
+console.log(Guid()) // 'edc848db-3478-1760-8b55-7986003d895f'
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["KMPPatternSearching.try","FormatPhoneNumber.try","../index.html"]);
+</script>

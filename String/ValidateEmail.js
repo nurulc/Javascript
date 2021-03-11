@@ -31,5 +31,5 @@ export { validateEmail }
  * Example
  */
 
-console.log(validateEmail('mahfoudh.arous@gmail.com');
-console.log(validateEmail('mahfoudh.arous.gmail.com');
+console.log(validateEmail('mahfoudh.arous@gmail.com'));
+console.log(validateEmail('mahfoudh.arous.gmail.com'));

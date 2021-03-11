@@ -1,0 +1,56 @@
+!head
+  <title>CheckVowels</title>
+!md
+# CheckVowels
+
+Given a string of words or phrases, count the number of vowels.
+Example: input = "hello world" return 3
+
+!tryit
+
+const checkVowels = (value) => {
+  if (typeof value !== 'string') {
+    throw new TypeError('The first param should be a string')
+  }
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  let countVowels = 0
+  for (let i = 0; i < value.length; i++) {
+    const char = value[i].toLowerCase()
+    if (vowels.includes(char)) {
+      countVowels++
+    }
+  }
+  return countVowels
+}
+
+
+!md
+Example
+
+!tryit
+
+let testStr = 'the quick brown fox jumps over the lazy doc';
+console.log('one method',testStr.replace(/[^aeiou]/ig,'').length);
+console.log('this method',checkVowels(testStr));
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["createPurmutations.try","CheckRearrangePalindrome.try","../index.html"]);
+</script>

@@ -1,0 +1,88 @@
+!head
+  <title>KMPPatternSearching</title>
+!md
+# KMPPatternSearching
+
+Implementing KMP Search Algorithm to search all the instances of pattern in
+given text
+Reference Book: Introduction to Algorithms, CLRS
+
+Explanation: https://www.topcoder.com/community/competitive-programming/tutorials/introduction-to-string-searching-algorithms/
+
+!tryit
+
+const computeLPS = (pattern) => {
+  const lps = Array(pattern.length)
+  lps[0] = 0
+  for (let i = 1; i < pattern.length; i++) {
+    let matched = lps[i - 1]
+    while (matched > 0 && pattern[i] !== pattern[matched]) {
+      matched = lps[matched - 1]
+    }
+    if (pattern[i] === pattern[matched]) {
+      matched++
+    }
+    lps[i] = matched
+  }
+  return lps
+}
+
+const KMPSearch = (text, pattern) => {
+  if (!pattern || !text) {
+    return [] // no results
+  }
+
+  // lps[i] = length of proper prefix of pattern[0]...pattern[i-1]
+  //          which is also proper suffix of it
+  const lps = computeLPS(pattern)
+  const result = []
+
+  let matched = 0
+  for (let i = 0; i < text.length; i++) {
+    while (matched > 0 && text[i] !== pattern[matched]) {
+      matched = lps[matched - 1]
+    }
+    if (text[i] === pattern[matched]) {
+      matched++
+    }
+    if (matched === pattern.length) {
+      result.push(i - pattern.length + 1)
+      matched = lps[matched - 1]
+    }
+  }
+
+  return result
+}
+
+
+!md
+Example
+
+!tryit
+/*test
+
+
+
+*/
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["MaxCharacter.try","GenerateGUID.try","../index.html"]);
+</script>

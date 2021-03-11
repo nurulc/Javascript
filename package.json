@@ -4,6 +4,8 @@
   "description": "A repository for All algorithms implemented in Javascript (for educational purposes only)",
   "main": "",
   "scripts": {
+    "start": "reload -d . -e try,html,css,js -w try_src -v -b -s ",
+    "tryit": "tryitjs --src try_src --dest try_it --filelist --local",
     "test": "jest --no-cache"
   },
   "author": "TheAlgorithms",
@@ -25,6 +27,9 @@
     "babel-jest": "^26.3.0",
     "doctest": "^0.17.1",
     "jest": "^26.4.2",
-    "standard": "^14.3.4"
+    "nodemon": "^2.0.7",
+    "reload": "^3.1.1",
+    "standard": "^14.3.4",
+    "strip-comments": "^2.0.1"
   }
 }

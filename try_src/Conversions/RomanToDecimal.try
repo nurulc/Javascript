@@ -1,0 +1,76 @@
+!head
+  <title>RomanToDecimal</title>
+!md
+# RomanToDecimal
+
+Convert string in Roman numeral representation to a number
+
+!tryit
+
+
+var values = {
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000
+}
+
+function romanToDecimal (romanNumber) {
+  let prev = ' '
+
+  let sum = 0
+
+  let newPrev = 0
+  for (let i = romanNumber.length - 1; i >= 0; i--) {
+    const c = romanNumber.charAt(i)
+
+    if (prev !== ' ') {
+      newPrev = values[prev] > newPrev ? values[prev] : newPrev
+    }
+
+    const currentNum = values[c]
+    if (currentNum >= newPrev) {
+      sum += currentNum
+    } else {
+      sum -= currentNum
+    }
+
+    prev = c
+  }
+  return sum
+}
+
+!md
+Example
+
+!tryit
+
+console.log(romanToDecimal('XXIIVV'))
+console.log(romanToDecimal('MDCCCIV'))
+console.log(romanToDecimal('XXIVI'))
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["","RGBToHex.try","../index.html"]);
+</script>

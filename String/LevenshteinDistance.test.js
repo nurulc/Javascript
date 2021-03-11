@@ -1,4 +1,4 @@
-import levenshteinDistance from './LevenshteinDistance'
+import {levenshteinDistance} from './LevenshteinDistance'
 
 describe('levenshteinDistance', () => {
   it('should calculate edit distance between two strings', () => {
@@ -15,12 +15,14 @@ describe('levenshteinDistance', () => {
     expect(levenshteinDistance('firm', 'forge')).toBe(3)
 
     // Should just substitute i with s, g with i, h with t and delete f from front
-    expect(levenshteinDistance('fighting', 'sitting')).toBe(4)
+    // Actually: s -> f, g -> t , delete h giving a distance of 3
+    expect(levenshteinDistance('fighting', 'sitting')).toBe(3)
 
     // Should add 4 letters b, a, s and e at the beginning.
     expect(levenshteinDistance('ball', 'baseball')).toBe(4)
 
-    // Should delete 4 letters b, a, s and e at the beginning.
-    expect(levenshteinDistance('baseball', 'foot')).toBe(4)
+    // Should delete 4 letters b, a, s and e at the beginning.???
+    // everything deleted 4 letters substitute 4
+    expect(levenshteinDistance('baseball', 'foot')).toBe(8)
   })
 })

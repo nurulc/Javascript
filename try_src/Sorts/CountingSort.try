@@ -1,0 +1,73 @@
+!head
+  <title>CountingSort</title>
+!md
+# CountingSort
+
+Counting sort is an algorithm for sorting a collection
+of objects according to keys that are small integers.
+
+It is an integer sorting algorithm.
+
+Wikipedia: https://en.wikipedia.org/wiki/Counting_sort
+Animated Visual: https://www.cs.usfca.edu/~galles/visualization/CountingSort.html
+
+!tryit
+
+function countingSort (arr, min, max) {
+  let i
+  let z = 0
+  const count = []
+
+  for (i = min; i <= max; i++) {
+    count[i] = 0
+  }
+
+  for (i = 0; i < arr.length; i++) {
+    count[arr[i]]++
+  }
+
+  for (i = min; i <= max; i++) {
+    while (count[i]-- > 0) {
+      arr[z++] = i
+    }
+  }
+
+  return arr
+}
+
+!md
+Example
+Implementation of Counting Sort
+
+!tryit
+const array = [3, 0, 2, 5, 4, 1]
+// Before Sort
+console.log('\n- Before Sort | Implementation of Counting Sort -')
+console.log(array)
+// After Sort
+console.log('- After Sort | Implementation of Counting Sort -')
+console.log(countingSort(array))
+console.log('\n')
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["","CombSort.try","../index.html"]);
+</script>

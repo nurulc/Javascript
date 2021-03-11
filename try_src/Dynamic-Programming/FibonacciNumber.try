@@ -1,0 +1,57 @@
+!head
+  <title>FibonacciNumber</title>
+!md
+# FibonacciNumber
+
+https://en.wikipedia.org/wiki/Fibonacci_number
+
+
+
+!tryit
+
+const fibonacci = (N) => {
+  // creating array to store values
+  const memo = new Array(N + 1)
+  memo[0] = 0
+  memo[1] = 1
+  for (let i = 2; i <= N; i++) {
+    memo[i] = memo[i - 1] + memo[i - 2]
+  }
+  return memo[N]
+}
+
+!md
+Example
+
+ This is not very efficient in the space complexity, and does not handle very large Fibonacci numbers
+ 
+
+!tryit
+// testing
+(() => {
+  const number = 5;
+  console.log(number + 'th Fibonacci number is ' + fibonacci(number))
+})()
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["FindMonthCalendar.try","EditDistance.try","../index.html"]);
+</script>

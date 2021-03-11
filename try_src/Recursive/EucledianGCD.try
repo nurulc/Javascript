@@ -1,0 +1,76 @@
+!head
+  <title>EucledianGCD</title>
+!md
+# EucledianGCD
+
+GCD - Ecclid's algorithm
+
+Find the greatest common divisor
+
+!tryit
+
+function euclideanGCDRecursive (first, second) {
+  /*
+    Calculates GCD of two numbers using Euclidean Recursive Algorithm
+    :param first: First number
+    :param second: Second number
+    :return: GCD of the numbers
+    */
+  if (second === 0) {
+    return first
+  } else {
+    return euclideanGCDRecursive(second, (first % second))
+  }
+}
+
+function euclideanGCDIterative (first, second) {
+  /*
+    Calculates GCD of two numbers using Euclidean Iterative Algorithm
+    :param first: First number
+    :param second: Second number
+    :return: GCD of the numbers
+    */
+  while (second !== 0) {
+    const temp = second
+    second = first % second
+    first = temp
+  }
+  return first
+}
+
+!md
+Example
+
+!tryit
+
+function EucledianGCDTest() {
+  const first = 20
+  const second = 30
+  console.log('Recursive GCD for %d and %d is %d', first, second, euclideanGCDRecursive(first, second))
+  console.log('Iterative GCD for %d and %d is %d', first, second, euclideanGCDIterative(first, second))
+}
+
+EucledianGCDTest()
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["TowerOfHanoi.try","BinarySearch.try","../index.html"]);
+</script>

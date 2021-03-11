@@ -1,0 +1,71 @@
+!head
+  <title>PermutateString</title>
+!md
+# PermutateString
+
+Return all permutation of a string
+
+!tryit
+
+
+
+const permutate = (aString) => {
+  if (typeof aString !== 'string' || !aString) {
+    throw new Error('The arg must be a valid, non empty string')
+  }
+  const characters = aString.split('')
+  let permutations = [[characters.shift()]]
+  while (characters.length) {
+    const currentCharacter = characters.shift()
+    permutations = calculateCurrentCharacterPermutation(permutations, currentCharacter)
+  }
+  return permutations
+    .map(character => character.join(''))
+    .filter((item, index, self) => (self.indexOf(item) === index))
+    .sort()
+}
+
+const calculateCurrentCharacterPermutation = (allPermutations, currentCharacter) => {
+  const currentPermutations = []
+  allPermutations.map(permutation => {
+    let index = 0
+    while (index <= permutation.length) {
+      const tmp = [...permutation]
+      tmp.splice(index, 0, currentCharacter)
+      currentPermutations.push(tmp)
+      index++
+    }
+  })
+  return currentPermutations
+}
+
+
+
+!md
+Example
+
+!tryit
+
+permutate('good'); //['dgoo', 'dogo', 'doog', 'gdoo', 'godo', 'good', 'odgo', 'odog', 'ogdo', 'ogod', 'oodg', 'oogd']
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["ReverseWords.try","MaxCharacter.try","../index.html"]);
+</script>

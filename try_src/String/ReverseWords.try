@@ -1,0 +1,70 @@
+!head
+  <title>ReverseWords</title>
+!md
+# ReverseWords
+
+Reverse words in a string
+
+!tryit
+
+/*
+*  Doctests
+*
+* > reverseWords('I Love JS')
+*  'JS Love I'
+* > reverseWords('Hello World')
+*  'World Hello'
+* > reverseWords('The Algorithms Javascript')
+*  'Javascript Algorithms The'
+* > reverseWords([])
+*  ! TypeError
+* > reverseWords({})
+*  ! TypeError
+* > reverseWords(null)
+*  ! TypeError
+*/
+const reverseWords = (str) => {
+  if (typeof str !== 'string') {
+    throw new TypeError('The given value is not a string')
+  }
+  // Split string into words
+  // Ex. "I Love JS" => ["I", "Love", "JS"]
+  const words = str.split(' ')
+  // reverse words
+  // ["I", "Love", "JS"] => ["JS", "Love", "I"]
+  const reversedWords = words.reverse()
+  // join reversed words with space and return
+  // ["JS", "Love", "I"] => "JS Love I"
+  return reversedWords.join(' ')
+}
+
+
+
+!md
+Example
+
+
+!tryit
+reverseWords('I Love JS')
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["ValidateEmail.try","PermutateString.try","../index.html"]);
+</script>

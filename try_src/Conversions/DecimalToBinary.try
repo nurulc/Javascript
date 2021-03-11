@@ -1,0 +1,66 @@
+!head
+  <title>DecimalToBinary</title>
+!md
+# DecimalToBinary
+
+Convert a decimal string to number
+
+
+!tryit
+
+function decimalToBinary (num) {
+  var bin = '';
+  let sign = '';
+  if(num < 0 ) {
+  	sign = '-';
+  	num = -num;
+  }
+
+  while (num > 0) {
+    bin = (num % 2)+bin
+    num >>= 1 // basically /= 2 without remainder if any
+  }
+  return sign+bin;
+}
+
+!md
+Example
+
+!tryit
+
+function testNunToDecStr(num) {
+	console,log(`Number ${num} as string is ${decimalToBinary(num)}`)
+}
+
+testNunToDecStr(2)
+testNunToDecStr(7)
+testNunToDecStr(-35)
+
+// Alternative
+let num = 253;
+console.log(""+num);
+num = -253;
+console.log(""+num);
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["HexToRGB.try","BinaryToDecimal.try","../index.html"]);
+</script>

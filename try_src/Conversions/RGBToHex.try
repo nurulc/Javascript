@@ -1,0 +1,53 @@
+!head
+  <title>RGBToHex</title>
+!md
+# RGBToHex
+
+
+
+!tryit
+
+function RGBToHex (r, g, b) {
+  if (
+    typeof r !== 'number' ||
+    typeof g !== 'number' ||
+    typeof b !== 'number'
+  ) {
+    throw new TypeError('argument is not a Number')
+  }
+
+  const toHex = n => (n || '0').toString(16).padStart(2, '0')
+
+  return `#${toHex(r)}${toHex(g)}${toHex(b)}`
+}
+
+!md
+Example
+
+!tryit
+
+console.log(RGBToHex(255, 255, 255) === '#ffffff')
+console.log(RGBToHex(255, 99, 71) === '#ff6347')
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["RomanToDecimal.try","HexToRGB.try","../index.html"]);
+</script>

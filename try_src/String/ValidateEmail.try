@@ -1,0 +1,63 @@
+!head
+  <title>ValidateEmail</title>
+!md
+# ValidateEmail
+
+Function that takes a string input and return either true or false
+If it is a valid email address
+
+
+!tryit
+
+/*
+*  Doctests
+*
+* > validateEmail('mahfoudh.arous@gmail.com')
+*  true
+* > validateEmail('mahfoudh.arous@helsinki.edu')
+*  true
+* > validateEmail('mahfoudh.arous.com')
+*  false
+* > validateEmail('')
+*  ! TypeError
+* > validateEmail(null)
+*  ! TypeError
+*/
+const validateEmail = (str) => {
+  if (str === '' || str === null) {
+    throw new TypeError('Email Address String Null or Empty.')
+  }
+
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str)
+}
+
+
+!md
+Example
+
+!tryit
+
+console.log(validateEmail('mahfoudh.arous@gmail.com'));
+console.log(validateEmail('mahfoudh.arous.gmail.com'));
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["","ReverseWords.try","../index.html"]);
+</script>

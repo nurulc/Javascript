@@ -1,0 +1,51 @@
+!head
+  <title>TowerOfHanoi</title>
+!md
+# TowerOfHanoi
+
+
+wiki - https://en.wikipedia.org/wiki/Tower_of_Hanoi
+Recursive Javascript function to solve tower of hanoi
+
+!tryit
+
+function TowerOfHanoi (n, fromRod, toRod, auxRod) {
+  if (n === 1) {
+    console.log(`Move disk 1 from rod ${fromRod} to rod ${toRod}`)
+    return
+  }
+  TowerOfHanoi(n - 1, fromRod, auxRod, toRod)
+  console.log(`Move disk ${n} from rod ${fromRod} to rod ${toRod}`)
+  TowerOfHanoi(n - 1, auxRod, toRod, fromRod)
+}
+!md
+Example
+
+!tryit
+// Driver code
+const n = 4
+TowerOfHanoi(n, 'A', 'C', 'B')
+// A, C, B are the name of rods
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["","EucledianGCD.try","../index.html"]);
+</script>

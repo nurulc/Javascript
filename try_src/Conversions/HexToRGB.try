@@ -1,0 +1,51 @@
+!head
+  <title>HexToRGB</title>
+!md
+# HexToRGB
+
+
+
+!tryit
+
+function hexStringToRGB (hexString) {
+  var r = hexString.substring(0, 2)
+  var g = hexString.substring(2, 4)
+  var b = hexString.substring(4, 6)
+
+  r = parseInt(r, 16)
+  g = parseInt(g, 16)
+  b = parseInt(b, 16)
+  var obj = { r, g, b }
+
+  return obj
+}
+
+!md
+Example
+
+!tryit
+
+console.log(hexStringToRGB('ffffff'))
+
+
+!end
+<script>
+/*
+if(!console.logx) {
+  console.logx = console.log;
+  console.log = function(...args) {
+    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
+    $$.HTML(res+'<br>');
+  }
+}
+*/
+let cc = $$.codeTransform;
+cc.add(cc.comment);
+cc.add(cc.class);
+cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => (console.log(src),src)); // display transformed data
+</script>
+!end
+<script>
+setNext(["RGBToHex.try","DecimalToBinary.try","../index.html"]);
+</script>
