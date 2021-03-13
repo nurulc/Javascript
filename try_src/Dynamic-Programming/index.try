@@ -1,0 +1,30 @@
+!head
+  <title>Dynamic-Programming</title>
+  <script src="../tryit-helper.js"></script>
+!md
+# Dynamic-Programming
+
+@@include ClimbingStairs.try
+@@include CoinChange.try
+@@include EditDistance.try
+@@include FibonacciNumber.try
+@@include FindMonthCalendar.try
+@@include TrappingRainWater.try
+@@include ZeroOneKnapsack.try
+!end
+<style>
+  .back-button {
+      position: fixed !important;
+      margin-top: 2rem !important;
+      margin-left: 3rem !important;
+  }
+</style>
+<script>
+    let cc = $$.codeTransform;
+    cc.add(cc.comment);
+    cc.add(cc.class);
+    cc.add(src => src.replace(/^\s*const\s/mg,'var '));
+    cc.add(src => src.replace(/console.log/mg, '$$$$.D'));
+    cc.add(src => (console.log(src),src)); // display transformed data
+    addBackButton("../index.html");
+</script>

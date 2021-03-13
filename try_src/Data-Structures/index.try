@@ -1,0 +1,31 @@
+!head
+  <title>Data-Structures</title>
+  <script src="../tryit-helper.js"></script>
+!md
+# Data-Structures
+
+Some README content from Data-Structures
+*   <a href="Array.html">Array</a>
+*   <a href="Graph.html">Graph</a>
+*   <a href="Heap.html">Heap</a>
+*   <a href="Linked-List.html">Linked-List</a>
+*   <a href="Queue.html">Queue</a>
+*   <a href="Stack.html">Stack</a>
+*   <a href="Tree.html">Tree</a>
+!end
+<style>
+  .back-button {
+      position: fixed !important;
+      margin-top: 2rem !important;
+      margin-left: 3rem !important;
+  }
+</style>
+<script>
+    let cc = $$.codeTransform;
+    cc.add(cc.comment);
+    cc.add(cc.class);
+    cc.add(src => src.replace(/^\s*const\s/mg,'var '));
+    cc.add(src => src.replace(/console.log/mg, '$$$$.D'));
+    cc.add(src => (console.log(src),src)); // display transformed data
+    addBackButton("../index.html");
+</script>

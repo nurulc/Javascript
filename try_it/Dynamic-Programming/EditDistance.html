@@ -41,7 +41,8 @@
 <script src="https://unpkg.com/lz-string@1.4.4/libs/lz-string.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dataformsjs/js/react/jsxLoader.min.js"></script>
 <script src="../javascript/tryit-min.js"></script>
-<title>EditDistance</title></head>
+<title>EditDistance</title>
+<script src="/try_it/tryit-helper.js"></script></head>
 <body>
 <div class="ui sidebar inverted vertical menu toc-area">
 <div class="item"> <a href="https://github.com/nurulc/tryitjs" target="_blank"><img src="https://unpkg.com/tryitjs/tryit-small.png" title="Built using TryItJs"></a></div> 
@@ -147,7 +148,7 @@ const minimumEditDistance = (word1, word2) =&gt; {
 	<div class="tryit-inner ui sizer vertical segment" style="padding-top: 1.9rem; margin-bottom: -3.5rem">
 		<div class="ui sizer vertical segment bottom" style="border-bottom: none;">
 			<textarea class="tryit ui " id="tryit2">
-const main = () =&gt; {
+const EditDistanceTest = () =&gt; {
   console.log(minimumEditDistance('horse', 'ros'))
   console.log(minimumEditDistance('cat', 'cut'))
   console.log(minimumEditDistance('', 'abc'))
@@ -205,7 +206,8 @@ if(!console.logx) {
 let cc = $$.codeTransform;
 cc.add(cc.comment);
 cc.add(cc.class);
-cc.add(src => src.replace(/console.log/, '$$$.D'));
+cc.add(src => src.replace(/^\s*const\s/mg,'var '));
+cc.add(src => src.replace(/console.log/mg, '$$$$.D'));
 cc.add(src => (console.log(src),src)); // display transformed data
 </script>
 <script>

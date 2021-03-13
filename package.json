@@ -5,6 +5,7 @@
   "main": "",
   "scripts": {
     "start": "reload -d . -e try,html,css,js -w try_src -v -b -s ",
+    "gen:try": "node _scripts/scan-files && npm run tryit",
     "tryit": "tryitjs --src try_src --dest try_it --filelist --local",
     "test": "jest --no-cache"
   },

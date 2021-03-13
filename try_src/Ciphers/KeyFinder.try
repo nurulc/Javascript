@@ -1,5 +1,3 @@
-!head
-  <title>KeyFinder</title>
 !md
 # KeyFinder
 
@@ -160,24 +158,3 @@ Example
 console.log('Testing: ' + keyFinder('test')) // returns 0
 
 
-!end
-<script>
-/*
-if(!console.logx) {
-  console.logx = console.log;
-  console.log = function(...args) {
-    let res = args.filter(x=>x).map(x => '<pre>'+escapeHTML(x.toString())+'</pre>').join('&nbsp;');
-    $$.HTML(res+'<br>');
-  }
-}
-*/
-let cc = $$.codeTransform;
-cc.add(cc.comment);
-cc.add(cc.class);
-cc.add(src => src.replace(/console.log/, '$$$.D'));
-cc.add(src => (console.log(src),src)); // display transformed data
-</script>
-!end
-<script>
-setNext(["ROT13.try","CaesarsCipher.try","../index.html"]);
-</script>
