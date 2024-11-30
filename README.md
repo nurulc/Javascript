@@ -20,6 +20,10 @@ Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
 
 See our [directory](DIRECTORY.md).
 
+## Try it OUT online'
+
+[Link to online edit & try](https://nurulc.github.io/Algorithms/try_it/index.html#page-1)
+
 ## Algorithm Explanation
 
 see our [wiki](https://github.com/TheAlgorithms/Javascript/wiki)
